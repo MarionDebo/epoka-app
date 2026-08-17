@@ -14,8 +14,7 @@ Ce projet réussit s'il coche **tous** ces points (voir [`docs/one-pager.md`](do
 3. Secteur éducation
 4. Une touche d'IA au cœur du concept
 5. Réalisable en vibe coding
-6. Défendable en entretien senior PM / Head of Product
-7. Pièce de portfolio montrant la démarche produit
+6. Pièce de portfolio montrant la démarche produit
 
 ## Structure du repo
 
