@@ -10,9 +10,9 @@ Une app pour enfants qui transforme l'Histoire en rencontre : « parle » à un 
 Ce projet réussit s'il coche **tous** ces points (voir [`docs/one-pager.md`](docs/one-pager.md)) :
 
 1. Publié sur l'App Store — critère de succès n°1
-2. Grand public (familles), pas B2B
+2. Grand public (familles)
 3. Secteur éducation
-4. Une touche d'IA au cœur du concept
+4. De l'IA au cœur du concept
 5. Réalisable en vibe coding
 6. Pièce de portfolio montrant la démarche produit
 
