@@ -1,15 +1,14 @@
 # Journal des décisions — Époka
 
-Journal chronologique des décisions produit du projet. Une entrée par décision, la plus ancienne en haut.
+Journal chronologique des décisions produit du projet. Une entrée par décision, la plus récente en haut.
 Format d'une entrée : **contexte → décision → alternatives écartées → conséquences**.
-Statuts possibles : *accepté*, *proposé*, *remplacé par #N*.
 
 Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** (ordre chronologique).
 
 ---
 
 ## #1 — Concept retenu : Époka *(parmi 3 candidats)*
-- **Date :** 2026-08-16 · **Statut :** accepté
+- **Date :** 2026-08-16 
 
 **Contexte.** Trois concepts en shortlist pour un projet perso à vibe coder, destiné à être publié et défendu en entretien : Époka (interroger des personnages historiques), une app de logistique scolaire, et un scanner d'ordonnance → planning de prise. Critères : grand public, secteur santé ou éducation, publication App Store, touche d'IA, défendable en entretien.
 
@@ -24,7 +23,7 @@ Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** 
 ---
 
 ## #2 — Ancrer les réponses sur des sources vérifiées plutôt que laisser l'IA libre
-- **Date :** 2026-08-16 · **Statut :** accepté
+- **Date :** 2026-08-16
 
 **Contexte.** Le cœur d'Époka est une conversation IA en rôle destinée à des enfants. Un modèle libre peut halluciner, inventer des faits ou glisser des anachronismes — inacceptable pour un public jeune, et la fiabilité est justement ce qui différencie d'un chatbot généraliste.
 
@@ -39,7 +38,7 @@ Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** 
 ---
 
 ## #3 — Définir un périmètre de sécurité pour le contenu destiné aux enfants
-- **Date :** 2026-08-16 · **Statut :** accepté
+- **Date :** 2026-08-16 
 
 **Contexte.** L'Histoire comporte des sujets durs (guerre, mort, esclavage, violence). Un personnage interrogé par un enfant peut y être confronté. Il faut ni édulcorer à l'excès, ni exposer un enfant à un contenu inadapté. C'est le risque produit central d'Époka et une exigence de la catégorie Enfants de l'App Store.
 
@@ -57,7 +56,7 @@ Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** 
 
 ```
 ## #N — [Titre court de la décision]
-- **Date :** AAAA-MM-JJ · **Statut :** proposé | accepté | remplacé par #M
+- **Date :** AAAA-MM-JJ 
 
 **Contexte.** Quel problème / quelle question ? Quelles contraintes ?
 **Décision.** Ce que j'ai décidé, en une ou deux phrases.

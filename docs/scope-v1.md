@@ -33,7 +33,7 @@ Prouver — et démontrer en 10 secondes — la boucle :
 
 ## Dans la v1 / Hors v1
 
-**Dans :** 8-12 personnages ancrés sur un corpus curé · la boucle interroger → débloquer → collectionner · garde-fous de sécurité enfant · collection persistée en local · onboarding minimal + parental gate + conformité Kids de base.
+**Dans :** 15 personnages ancrés sur un corpus curé · la boucle interroger → débloquer → collectionner · garde-fous de sécurité enfant · collection persistée en local · onboarding minimal + parental gate + conformité Kids de base.
 
 **Hors (reporté) :** comptes cloud, échange/multijoueur de cartes, génération d'illustrations à la volée, voix/audio des personnages, catalogue étendu, quêtes avancées, personnalisation poussée.
 
@@ -48,7 +48,7 @@ Un seul écran jetable, **un seul personnage**, fiche curée en dur. But : valid
 
 **Phase 3 — Conformité Kids (1 j).** Onboarding, parental gate, zéro tracking, politique de confidentialité, disclaimer IA. C'est ce qui rend la publication possible (critère de succès n°1).
 
-**Phase 4 — Polish + publication (2-3 j).** 8-12 personnages, illustrations des cartes, animations. Puis build EAS → TestFlight → soumission App Store (catégorie Enfants).
+**Phase 4 — Polish + publication (2-3 j).** 15 personnages, illustrations des cartes, animations. Puis build EAS → TestFlight → soumission App Store (catégorie Enfants).
 
 ## Stack
 
