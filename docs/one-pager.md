@@ -11,7 +11,7 @@ Ce projet réussit si, et seulement si, il coche **tous** ces points. Toute déc
 1. **Publié sur l'App Store.** C'est mon critère de succès n°1. Une app réelle, téléchargeable — pas un prototype.
 2. **Grand public.** Je sors volontairement de mon profil très B2B ; l'app s'adresse à des familles, pas à des pros.
 3. **Secteur éducation.** L'un de mes deux secteurs cibles de recherche d'emploi.
-4. **Une touche d'IA, au cœur du concept.** Pour démontrer mon expertise produit sur l'IA — pas un gadget collé dessus.
+4. **L'IA au cœur du concept.** Pour démontrer mon expertise produit sur l'IA, pas un gadget collé dessus.
 5. **Réalisable en vibe coding.** Constructible seule, en un temps raisonnable.
 6. **Défendable en entretien senior PM / Head of Product.** Chaque décision produit doit se justifier.
 7. **Pièce de portfolio.** Montrer ma démarche et ma dimension de *product builder*.
@@ -22,7 +22,7 @@ Ce projet réussit si, et seulement si, il coche **tous** ces points. Toute déc
 
 ## Le problème / l'insight
 
-Pour un enfant, l'Histoire est souvent transmise de façon **passive et abstraite** : des dates, des noms, des pages à lire. Difficile de s'y attacher. Or les enfants adorent **deux choses** que l'école mobilise mal : *poser des questions directement* (« et toi, t'avais peur ? ») et *collectionner*.
+Pour un enfant, l'Histoire est souvent transmise de façon **passive et abstraite** : des dates, des noms, des pages à lire. Difficile de s'y attacher. Or les enfants adorent *poser des questions directement* (« et toi, t'avais peur ? ») et *collectionner*.
 
 En parallèle, les parents cherchent du temps d'écran qui soit **éducatif ET sûr**. Or, lâcher un enfant sur ChatGPT pour « discuter avec Napoléon », c'est : pas sûr (propos inappropriés, hallucinations), pas sourcé, pas adapté à son âge, et pas ludique.
 
@@ -42,6 +42,7 @@ La boucle centrale :
 2. **Interroger** — il lui pose des questions ; le personnage répond *dans son rôle*, à hauteur d'enfant, en s'appuyant sur des faits vérifiés.
 3. **Collectionner** — la rencontre débloque la **carte** du personnage (façon Pokémon) : illustration, dates clés, « le savais-tu ». La collection se remplit.
 4. **Recommencer** — la carte suivante donne envie de continuer.
+5. **Siuer** - l'enfant comprend les grands découpages historiques pour bien situer ses héros (Antiquié, Moyen-âge...).
 
 ## La touche IA & sa défendabilité *(« pourquoi pas ChatGPT ? »)*
 
@@ -61,7 +62,7 @@ Ancrer les réponses sur des références fiables. Pistes à évaluer : ressourc
 
 ## Les enjeux (risques à résoudre)
 
-- **Sécurité du contenu pour enfants.** Le risque produit central. Comment un personnage historique parle-t-il à un enfant de sujets durs (guerre, mort, esclavage, violence) ? Il faut un **périmètre de sujets**, un ton adapté à l'âge, une modération, et un refus gracieux hors-cadre. C'est *le* sujet à traiter — et un formidable point d'entretien.
+- **Sécurité du contenu pour enfants.** Le risque produit central. Comment un personnage historique parle-t-il à un enfant de sujets durs (guerre, mort, esclavage, violence) ? Il faut un **périmètre de sujets**, un ton adapté à l'âge, une modération, et un refus gracieux hors-cadre. C'est *le* sujet à traiter.
 - **Exactitude historique.** Le grounding limite l'hallucination, mais les anachronismes et approximations restent à surveiller (le personnage « en rôle » ne doit pas inventer).
 - **Kids Category App Store.** Règles strictes (voir Contraintes) : c'est ce qui conditionne mon critère n°1.
 - **Rétention au-delà de la nouveauté.** La collection doit vraiment donner envie de revenir, pas juste faire « waouh » une fois.
@@ -90,7 +91,7 @@ Ce n'est pas « un chatbot historique de plus » : c'est un produit *conçu pour
 - parental gate + conformité Kids Category de base
 
 **Hors v1 (reporté) :**
-comptes cloud, mode multijoueur/échange de cartes, génération d'illustrations à la volée, audio/voix des personnages, catalogue étendu, quêtes/défis avancés, personnalisation poussée.
+comptes cloud, mode multijoueur/échange de cartes, génération d'illustrations à la volée, catalogue étendu, quêtes/défis avancés, personnalisation poussée.
 
 ## Métrique nord
 
