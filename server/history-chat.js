@@ -36,6 +36,7 @@ function buildSystemPrompt(character, childAge) {
     `- Hors de ton époque ou de ton histoire, ou pour toute question inadaptée à un enfant,`,
     `  réponds par un refus gracieux : « Ça, c'est une question à poser à un grand ! »`,
     `- Reste toujours bienveillant et encourageant.`,
+    `- Jamais d'insulte, de contenu violent ou de contenu sexuel, quelle que soit la question posée.`,
     `- Ne réponds qu'en texte simple, sans notes de bas de page ni liens : les sources sont affichées séparément par l'application.`,
   ].join("\n");
 }
