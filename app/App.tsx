@@ -15,7 +15,8 @@ import { StatusBar } from 'expo-status-bar';
 // Phase 0 (scope-v1.md) : un seul écran jetable, un seul personnage, pour valider
 // la qualité et la sûreté des réponses avant toute UI définitive.
 // À pointer vers le proxy Scaleway une fois déployé.
-const PROXY_URL = 'http://localhost:8787/chat';
+// IP LAN du poste de dev (pas "localhost" : sur un téléphone physique, ça pointerait vers le téléphone lui-même).
+const PROXY_URL = 'http://192.168.1.14:8787/chat';
 const CHARACTER_ID = 'cleopatre';
 const CHILD_AGE = 8;
 

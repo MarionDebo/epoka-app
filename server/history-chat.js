@@ -11,8 +11,15 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { CHARACTERS } from "./characters.js";
 
-const client = new Anthropic();
 const MODEL = "claude-sonnet-5";
+
+// Instancié à la première utilisation, pas au chargement du module : le SDK lit la clé
+// depuis process.env à la construction, qui doit donc avoir déjà été peuplé (voir index.js).
+let client;
+function getClient() {
+  if (!client) client = new Anthropic();
+  return client;
+}
 
 function buildSystemPrompt(character, childAge) {
   return [
@@ -39,7 +46,7 @@ export async function chat({ characterId, childAge = 8, messages = [] }) {
     throw Object.assign(new Error("Personnage inconnu"), { statusCode: 404 });
   }
 
-  const response = await client.messages.create({
+  const response = await getClient().messages.create({
     model: MODEL,
     max_tokens: 1024,
     system: buildSystemPrompt(character, childAge),
