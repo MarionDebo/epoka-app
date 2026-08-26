@@ -15,8 +15,10 @@ import { StatusBar } from 'expo-status-bar';
 // Phase 0 (scope-v1.md) : un seul écran jetable, un seul personnage, pour valider
 // la qualité et la sûreté des réponses avant toute UI définitive.
 // À pointer vers le proxy Scaleway une fois déployé.
-// IP LAN du poste de dev (pas "localhost" : sur un téléphone physique, ça pointerait vers le téléphone lui-même).
-const PROXY_URL = 'http://192.168.1.14:8787/chat';
+// Sur le web (navigateur), "localhost" désigne le poste de dev lui-même : correct.
+// Sur un téléphone physique (Expo Go), il faudrait l'IP LAN du poste de dev à la place.
+const DEV_MACHINE_HOST = Platform.OS === 'web' ? 'localhost' : '192.168.1.14';
+const PROXY_URL = `http://${DEV_MACHINE_HOST}:8787/chat`;
 const CHARACTER_ID = 'cleopatre';
 const CHILD_AGE = 8;
 
