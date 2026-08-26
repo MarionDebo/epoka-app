@@ -9,8 +9,25 @@ Petit service serverless (cible : **Scaleway Functions**) qui reçoit les questi
 
 ## Contenu
 
-- `history-chat.example.js` — **stub non fonctionnel** montrant la structure de l'appel : construction du prompt système (rôle + grounding + garde-fous), format de la requête. À adapter au provider choisi et à déployer sur Scaleway.
+- `characters.js` — corpus curé v1 : fiches de faits vérifiés par personnage, chacune rattachée à ses sources (voir `docs/sources.md`).
+- `history-chat.js` — construit le prompt système (rôle + grounding + garde-fous enfant), appelle Claude (Sonnet 5), renvoie `{ reply, sources }`. Les sources ne sont jamais générées par le modèle : elles viennent telles quelles de la fiche.
+- `index.js` — petit serveur Express pour le dev local (`POST /chat`). En production, la même logique est déployée sur Scaleway Functions.
 
 ## Variables d'environnement
 
-Voir `.env.example` à la racine. La clé du provider IA se configure **uniquement** dans l'environnement de la fonction déployée, pas dans le repo.
+Voir `.env.example` à la racine (`ANTHROPIC_API_KEY`, `PORT`). En prod, la clé se configure **uniquement** dans l'environnement de la fonction déployée sur Scaleway, jamais dans le repo.
+
+## Lancer en local
+
+```bash
+cd server
+npm install
+cp ../.env.example ../.env   # puis renseigner ANTHROPIC_API_KEY
+npm run dev
+```
+
+```bash
+curl -X POST http://localhost:8787/chat \
+  -H "Content-Type: application/json" \
+  -d '{"characterId":"cleopatre","childAge":8,"messages":[{"role":"user","content":"Tu avais peur des Romains ?"}]}'
+```
