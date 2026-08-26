@@ -52,6 +52,32 @@ Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** 
 
 ---
 
+## #4 — Sources de grounding retenues : data.bnf.fr et Gallica (institutionnelles)
+- **Date :** 2026-08-26
+
+**Contexte.** La décision #2 reportait l'évaluation des API patrimoniales/bibliothèque. Plusieurs pistes de sources françaises ont été comparées (Wikipédia, Wikidata, Vikidia, Wikimini, Éduthèque, Larousse/Universalis, data.bnf.fr, Gallica) selon deux critères : institutionnalité (autorité garante, défendable auprès des parents) et accès API réellement exploitable.
+
+**Décision.** Retenir **data.bnf.fr** et **Gallica** (toutes deux BnF) comme sources de référence pour le corpus curé — seules sources à la fois institutionnelles et vérifiées techniquement. Détail complet dans `docs/sources.md`.
+
+**Alternatives écartées.** Wikipédia/Wikidata/Vikidia/Wikimini (collaboratifs, pas d'autorité éditoriale garante) ; Éduthèque (pas d'API ouverte, accès enseignant) ; Larousse/Universalis (contenu propriétaire fermé). Détail des raisons dans `docs/sources.md`.
+
+**Conséquences.** (+) Argument « sources vérifiées » défendable sans détour. (−) **data.bnf.fr n'a pas de moteur de recherche en API** : chaque personnage doit être identifié à l'avance par son ARK (identifiant pérenne BnF), pas de recherche par nom exploitable en code. Solution technique validée : passer par **Wikidata (SPARQL, propriété P268)** comme simple annuaire pour retrouver l'ARK, puis interroger data.bnf.fr avec cet identifiant. Vu le corpus restreint (8-15 personnages), une table de correspondance nom → ARK constituée une fois suffit — pas besoin d'appeler Wikidata à chaque requête. Gallica (API SRU) nécessite un header `User-Agent` de navigateur, sinon bloquée (403).
+
+---
+
+## #5 — Modèle Claude pour le chat en rôle : Sonnet 5 plutôt qu'un modèle « léger »
+- **Date :** 2026-08-26
+
+**Contexte.** Le one-pager posait la contrainte d'un « modèle multimodal léger » pour maîtriser coût/latence (public enfant, réponses courtes). Au moment de coder le premier écran de conversation (Cléopâtre), il a fallu trancher entre un modèle très économique (Haiku 4.5), un compromis (Sonnet 5) ou le plus capable (Opus 5).
+
+**Décision.** Utiliser **Claude Sonnet 5** pour les réponses en rôle. Compromis entre coût maîtrisé et fiabilité du respect des consignes (jeu de rôle + ancrage strict sur la fiche + garde-fous de sécurité enfant) — plus sûr qu'Haiku sur ce dernier point, sans le surcoût d'Opus.
+
+**Alternatives écartées.** Haiku 4.5 (le plus proche de la contrainte « léger » initiale du one-pager, mais risque plus élevé d'écart au cadrage de sécurité) ; Opus 5 (le plus capable, mais coût disproportionné pour des réponses courtes et bornées).
+
+**Conséquences.** Ajuste implicitement la contrainte « modèle léger » du one-pager vers « modèle intermédiaire » — à surveiller sur le coût réel en usage avant la Phase 4 (polish/publication). Architecture retenue en parallèle : les **sources affichées dans le chat ne sont jamais générées par le modèle** — elles sont attachées programmatiquement par le serveur depuis la fiche du personnage (`server/characters.js`), pour garantir l'exactitude de l'attribution et éviter toute citation halluciné.
+
+---
+
 ## Gabarit d'une nouvelle décision
 
 ```
