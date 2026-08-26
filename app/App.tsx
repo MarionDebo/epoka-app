@@ -23,10 +23,11 @@ const CHARACTER_ID = 'cleopatre';
 const CHILD_AGE = 8;
 
 type Source = { label: string; url: string };
-type Message = { role: 'user' | 'assistant'; content: string; sources?: Source[] };
+type Message = { role: 'user' | 'assistant'; content: string };
 
 export default function App() {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [sources, setSources] = useState<Source[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -57,10 +58,8 @@ export default function App() {
       }
 
       const data: { reply: string; sources: Source[] } = await response.json();
-      setMessages((current) => [
-        ...current,
-        { role: 'assistant', content: data.reply, sources: data.sources },
-      ]);
+      setMessages((current) => [...current, { role: 'assistant', content: data.reply }]);
+      setSources(data.sources);
     } catch (error) {
       setErrorMessage(
         "Cléopâtre ne répond pas pour l'instant. Vérifie que le serveur local tourne (npm run dev dans server/)."
@@ -77,6 +76,11 @@ export default function App() {
         behavior={Platform.OS === 'ios' ? 'padding' : undefined}
       >
         <Text style={styles.header}>Cléopâtre 👑</Text>
+        {sources.length > 0 && (
+          <Text style={styles.sourcesSubtitle}>
+            Sources : {sources.map((source) => source.label).join(' · ')}
+          </Text>
+        )}
 
         <FlatList
           style={styles.flex}
@@ -91,16 +95,6 @@ export default function App() {
               ]}
             >
               <Text style={styles.bubbleText}>{item.content}</Text>
-              {item.sources && item.sources.length > 0 && (
-                <View style={styles.sources}>
-                  <Text style={styles.sourcesLabel}>Sources vérifiées :</Text>
-                  {item.sources.map((source) => (
-                    <Text key={source.url} style={styles.sourceItem}>
-                      • {source.label}
-                    </Text>
-                  ))}
-                </View>
-              )}
             </View>
           )}
         />
@@ -135,15 +129,18 @@ export default function App() {
 const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: '#fdf6e3' },
   flex: { flex: 1 },
-  header: { fontSize: 22, fontWeight: '700', textAlign: 'center', paddingVertical: 12 },
+  header: { fontSize: 22, fontWeight: '700', textAlign: 'center', paddingTop: 12 },
+  sourcesSubtitle: {
+    fontSize: 11,
+    color: '#888',
+    textAlign: 'center',
+    paddingBottom: 8,
+  },
   messageList: { padding: 12, gap: 8 },
   bubble: { maxWidth: '85%', borderRadius: 16, padding: 12 },
   bubbleUser: { alignSelf: 'flex-end', backgroundColor: '#cdeac0' },
   bubbleAssistant: { alignSelf: 'flex-start', backgroundColor: '#ffffff' },
   bubbleText: { fontSize: 16 },
-  sources: { marginTop: 8, borderTopWidth: 1, borderTopColor: '#eee', paddingTop: 6 },
-  sourcesLabel: { fontSize: 11, fontWeight: '600', color: '#888' },
-  sourceItem: { fontSize: 11, color: '#888' },
   error: { color: '#b00020', textAlign: 'center', paddingHorizontal: 12, paddingBottom: 4 },
   inputRow: { flexDirection: 'row', padding: 12, gap: 8 },
   input: {
