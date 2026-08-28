@@ -101,9 +101,3 @@ comptes cloud, mode multijoueur/échange de cartes, génération d'illustrations
 
 Un enfant tape « Cléopâtre, tu avais peur des Romains ? » → Cléopâtre répond *en personnage*, justement et à sa hauteur → une **carte animée se débloque** et rejoint la collection. Dix secondes, et toute ma thèse est là : IA ancrée + sécurité enfant + boucle de collection.
 
----
-
-### Prochaines étapes (aujourd'hui)
-1. **Dé-risquer les sources** (API vs corpus curé).
-2. **Mockups** des 3 écrans clés : la Collection, la Fiche/Carte personnage, la Conversation.
-3. **Scaffold du repo** (Expo + structure + proxy IA).
