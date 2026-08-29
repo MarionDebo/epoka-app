@@ -15,7 +15,7 @@ Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** 
 **Décision.** Retenir **Époka**. C'est le concept qui maximise simultanément le plus de critères : secteur éducation pur, défendabilité IA la plus forte (grounding sur sources vérifiées), effet démo/portfolio le plus marquant, récit d'entretien le plus riche — et c'était la première vraie envie.
 
 **Alternatives écartées.**
-- *Logistique scolaire* — marché saturé, feature « photo → calendrier » banalisée ; difficile à défendre comme distinctive.
+- *Logistique scolaire* — marché saturé, feature « photo → calendrier » banalisée ; difficile à défendre.
 - *Ordonnance → planning* — meilleur fit santé, mais chemin le plus risqué vers une app publiée (OCR d'ordonnances manuscrites peu fiable + falaise de responsabilité médicale).
 
 **Conséquences.** Secteur éducation ; public enfants + parents. Ouvre les enjeux de sécurité du contenu enfant et de conformité Kids Category (voir #3).
