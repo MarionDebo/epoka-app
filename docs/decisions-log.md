@@ -18,7 +18,7 @@ Pour ajouter une décision : copie le gabarit en bas et ajoute-la **à la fin** 
 - *Logistique scolaire* — marché saturé, feature « photo → calendrier » banalisée ; difficile à défendre.
 - *Ordonnance → planning* — meilleur fit santé, mais chemin le plus risqué vers une app publiée (OCR d'ordonnances manuscrites peu fiable + falaise de responsabilité médicale).
 
-**Conséquences.** Secteur éducation ; public enfants + parents. Ouvre les enjeux de sécurité du contenu enfant et de conformité Kids Category (voir #3).
+**Conséquences.** Secteur éducation ; public enfants + parents. Ouvre les enjeux de sécurité du contenu enfant et de conformité Kids Category.
 
 ---
 
