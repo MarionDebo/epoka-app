@@ -16,7 +16,7 @@ export const CHARACTERS = {
       "Parlait plusieurs langues, dont le grec et l'égyptien.",
       "A régné en s'alliant à Rome, d'abord avec Jules César, puis avec Marc Antoine.",
     ],
-    sensitiveTopics: ["guerre", "mort", "trahison", "suicide"],
+    sensitiveTopics: ["guerre", "mort", "trahison", "suicide", "maladie"],
     sources: [
       {
         label: "data.bnf.fr — Cléopâtre VII",
